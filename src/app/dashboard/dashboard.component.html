@@ -1,0 +1,70 @@
+<app-header></app-header>
+
+<div style="display: flex; flex-direction: column; padding: 100px;">
+    <form [formGroup]="formGroup" (ngSubmit)="onSubmit(formGroup.value)" class="form">
+   
+        <div>
+            <p>First Name</p>
+            <mat-form-field appearance="fill">
+                <mat-label>First Name</mat-label>
+                <input matInput formControlName="firstname" autocomplete="off" [(ngModel)]="loggedinUserProfile.firstname">
+                
+                <mat-error *ngIf="!formGroup.controls['firstname'].valid && formGroup.controls['firstname'].touched">
+                    Please enter valid First Name
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <p>Last Name</p>
+            <mat-form-field appearance="fill">
+                <mat-label>Last Name</mat-label>
+                <input matInput formControlName="lastname" autocomplete="off" [(ngModel)]="loggedinUserProfile.lastname">
+                <mat-error *ngIf="!formGroup.controls['lastname'].valid && formGroup.controls['lastname'].touched">
+                    Please enter valid Last Name
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <p>Country</p>
+            <mat-form-field appearance="fill">
+                <mat-label>Country</mat-label>
+                <input matInput formControlName="country" autocomplete="off" [(ngModel)]="loggedinUserProfile.country">
+                <mat-error *ngIf="!formGroup.controls['country'].valid && formGroup.controls['country'].touched">
+                    Please enter valid Country
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <p>Bio</p>
+            <mat-form-field appearance="fill">
+                <mat-label>Bio</mat-label>
+                <input matInput formControlName="bio" autocomplete="off" [(ngModel)]="loggedinUserProfile.bio">
+                <mat-error *ngIf="!formGroup.controls['bio'].valid && formGroup.controls['bio'].touched">
+                    Please enter valid Bio
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <p>Username</p>
+            <mat-form-field appearance="fill">
+                <mat-label>UserName</mat-label>
+                <input matInput formControlName="username" autocomplete="off" [(ngModel)]="username">
+                <mat-error *ngIf="!formGroup.controls['username'].valid && formGroup.controls['username'].touched">
+                    Please enter valid UserName
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <div>
+            <p>Email</p>
+            <mat-form-field appearance="fill">
+                <mat-label>Email</mat-label>
+                <input matInput  formControlName="email" autocomplete="off" [(ngModel)]="loggedinUserProfile.email">
+                <mat-error *ngIf="!formGroup.controls['email'].valid && formGroup.controls['email'].touched">
+                    Please enter valid Email
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <button mat-raised-button color="primary">Save</button>
+    </form>
+
+</div>

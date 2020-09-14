@@ -1,0 +1,25 @@
+.flex-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.flex-container > div {
+  padding-bottom: 20px;
+  padding-top: 10px;;
+}
+
+.flex-container div p label {
+    font-size: 15px;
+    font-weight: lighter;
+}
+.flex-container div  p  {
+    display: inline-block;
+    width: 150px;
+    font-size: 20px;
+}
+
+button{
+    width: 150px;
+    border-radius: 21px;
+}

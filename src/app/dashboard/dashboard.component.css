@@ -1,0 +1,13 @@
+p{
+    display: inline-block;
+    vertical-align: middle;
+    width: 150px;
+}
+.mat-form-field-underline {
+    display: none;
+}
+button{
+border-radius: 25px;
+width: 100px;
+margin-left: 100px;
+}

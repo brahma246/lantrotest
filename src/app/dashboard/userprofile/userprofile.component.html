@@ -1,0 +1,26 @@
+<app-header></app-header>
+
+<div class="flex-container" *ngIf="userProfile">
+    <mat-error>{{this.errMessage | uppercase}}</mat-error>
+    <div>
+        <p><label>First name</label></p>
+        <p> {{userProfile.firstname}} </p>
+    </div>
+    <div>
+        <p><label>Last name</label></p>
+        <p> {{userProfile.lastname}} </p>
+    </div>
+    <div>
+      <p>  <label>Password</label> </p>
+        <p> ***********</p>
+    </div>
+    <div>
+        <p><label>Email</label></p>
+        <p> {{userProfile.email}}</p>
+    </div>
+    <div>
+       <p> <label>Country</label> </p>
+        <p>{{userProfile.country}}</p>
+    </div>
+    <button mat-raised-button color="primary" [routerLink]="['/dashboard']">Update</button>
+</div>

@@ -1,0 +1,9 @@
+<mat-toolbar color="primary" class="navbar">
+    <div> Dashboard </div>
+    <div class="navbar-right">
+        <mat-icon>help</mat-icon>
+        <button mat-mini-fab color="transparent"  >
+          <a [routerLink]="['/profile']" style="text-decoration:none">  {{(firstname | slice:0:1 | uppercase) + (lastname | slice:0:1|uppercase)}} </a>
+        </button>
+    </div>
+</mat-toolbar>
